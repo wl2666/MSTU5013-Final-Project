@@ -166,6 +166,7 @@
 					if (querySnapshot.docs.length == 3) {
 						observer.trigger('timer:start');
 					}
+					this.update();
 				});
 
 				let bidValue;
