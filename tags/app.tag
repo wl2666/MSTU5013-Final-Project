@@ -17,7 +17,7 @@
 					</div>
 
 					<div class="table" hide={ currentBoard== "last"}>
-						<div id="countDownBoard" if={ currentBoard == 'start' && roomPlayers.length == 3 } class="clock">
+						<div id="countDownBoard" if={ currentBoard == 'start' && roomPlayers.length == 2 } class="clock">
 							<timer></timer>
 						</div>
 						<div id="playBoard" if={ currentBoard == 'round' }>
@@ -163,7 +163,7 @@
 				//when the number of players in one room is more than 3, it will trigger the timer
 				let roomRef = roomsRef.doc(roomCode).collection('players');
 				roomRef.get().then(querySnapshot => {
-					if (querySnapshot.docs.length == 3) {
+					if (querySnapshot.docs.length == 2) {
 						observer.trigger('timer:start');
 					}
 					this.update();
