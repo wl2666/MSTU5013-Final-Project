@@ -264,7 +264,7 @@
 	</script>
 
 	<style>
-		/* CSS */
+	  /* CSS */
 		:scope {}
 		.table {
 			width: 600px;
